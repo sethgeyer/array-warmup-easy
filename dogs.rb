@@ -54,6 +54,7 @@ end
 
 def dogs_with_long_names(dogs)
   long_length = 4
+
   # truth_array = []
   # dogs.each do |dog|
   #   the_truth = dog.length > long_length
