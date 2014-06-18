@@ -3,35 +3,55 @@ require_relative "testing_library"
 dogs = ["Fido", "Harleigh", "Mali", "Trixie", "Snow", "Victory"]
 
 def how_many_dogs(dogs)
-
+  dogs.length
 end
 
-def name_lengths(dogs)
 
+def name_lengths(dogs)
+  length_array = []
+  dogs.each { |dog| length_array << dog.length }
+  length_array
 end
 
 def reverse_dog_names(dogs)
-
+  reversed_array = []
+  dogs.each { |dog| reversed_array << dog.reverse }
+  reversed_array
 end
 
 def first_three_dogs_with_each(dogs)
-
+  three_dog_array ||= []
+  dogs.each do |dog|
+    three_dog_array << dog
+    break if three_dog_array.length == 3
+  end
+  three_dog_array
 end
 
 def first_three_dogs_without_each(dogs)
-
+  dogs[0..2]
 end
 
 def reverse_case_dog_names(dogs)
-
+  swapped_array = []
+  dogs.each { |dog| swapped_array << dog.swapcase }
+  swapped_array
 end
 
 def sum_of_all_dog_name_lengths(dogs)
-
+  sum_of_dog_names = 0
+  dogs.each { |dog| sum_of_dog_names += dog.length }
+  sum_of_dog_names
 end
 
 def dogs_with_long_names(dogs)
-
+  long_length = 4
+  truth_array = []
+  dogs.each do |dog|
+    the_truth = dog.length > long_length
+    truth_array << the_truth
+  end
+  truth_array
 end
 
 puts "*"*80
